@@ -12097,5 +12097,48 @@ textarea.form-control-lg {
   }
 }
 
+#texto_treinos {
+  position: absolute !important;
+  font-size: 100px;
+  margin: -750px 0px 0px 270px;
+}
+
+#texto_dietas {
+  position: absolute !important;
+  font-size: 100px;
+  margin: -750px 0px 0px 1330px;
+}
+
+p {
+  filter: none !important;
+}
+
+.info {
+  position: absolute !important;
+  font-size: 30px;
+  visibility: hidden;
+}
+.info.treinos {
+  margin: -600px 0px 0px 220px;
+}
+.info.dietas {
+  margin: -600px 0px 0px 310px;
+}
+
+img {
+  filter: brightness(30%);
+}
+
+#imagem_treinos :hover, #imagem_dietas :hover {
+  filter: brightness(30%) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='4' result='b'/%3E%3CfeMorphology operator='dilate' radius='4'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E %3C/svg%3E#a");
+}
+
+#imagem_treinos:hover .info.treinos {
+  visibility: visible;
+}
+
+#imagem_dietas:hover .info.dietas {
+  visibility: visible;
+}
 
 /*# sourceMappingURL=style.css.map */
