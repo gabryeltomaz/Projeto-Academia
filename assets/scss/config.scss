@@ -1,0 +1,19 @@
+*{
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+.navbar{
+  background-color: $cinza_fundo;
+}
+
+body{
+  background: $cinza_navbar;
+}
+

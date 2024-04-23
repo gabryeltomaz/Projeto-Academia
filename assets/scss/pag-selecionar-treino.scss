@@ -1,0 +1,34 @@
+.container-fluid{
+  #semana3x{
+      background-image: url('../img/semana3x.png');
+      background-position: center;
+      background-size: cover;
+      background-size: 500px;
+
+    }
+
+    #semana4x{
+      background-image: url('../img/fundosemana4x.png');
+      background-position: center;
+      background-size: cover;
+      background-size: 500px;
+    }
+
+    #semana5x{
+      background-image: url('../img/fundosemana5x.png');
+      background-position: center;
+      background-size: cover;
+      background-size: 500px;
+    }
+
+    #semana_personalizada{
+      background-image: url('../img/semanapersonalizada.png');
+      background-position: center;
+      background-size: cover;
+      background-size: 500px;
+    }
+}
+
+.card:hover{
+  scale: 1.05;
+}

@@ -12097,6 +12097,25 @@ textarea.form-control-lg {
   }
 }
 
+* {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: #211F1F;
+}
+
+body {
+  background: #312E2E;
+}
+
 #texto_treinos {
   position: absolute !important;
   font-size: 100px;
@@ -12139,6 +12158,35 @@ img {
 
 #imagem_dietas:hover .info.dietas {
   visibility: visible;
+}
+
+.container-fluid #semana3x {
+  background-image: url("../img/semana3x.png");
+  background-position: center;
+  background-size: cover;
+  background-size: 500px;
+}
+.container-fluid #semana4x {
+  background-image: url("../img/fundosemana4x.png");
+  background-position: center;
+  background-size: cover;
+  background-size: 500px;
+}
+.container-fluid #semana5x {
+  background-image: url("../img/fundosemana5x.png");
+  background-position: center;
+  background-size: cover;
+  background-size: 500px;
+}
+.container-fluid #semana_personalizada {
+  background-image: url("../img/semanapersonalizada.png");
+  background-position: center;
+  background-size: cover;
+  background-size: 500px;
+}
+
+.card:hover {
+  scale: 1.05;
 }
 
 /*# sourceMappingURL=style.css.map */
