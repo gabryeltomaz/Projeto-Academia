@@ -12160,6 +12160,10 @@ img {
   visibility: visible;
 }
 
+#main {
+  height: 1000px;
+}
+
 .container-fluid #semana3x {
   background-image: url("../img/semana3x.png");
   background-position: center;
