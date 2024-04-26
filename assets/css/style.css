@@ -12193,4 +12193,23 @@ img {
   margin: 570px;
 }
 
+table .input-group .form-control {
+  background: transparent;
+  color: white;
+  border: none;
+  text-align: center;
+}
+table .input-group ::placeholder {
+  color: lightgray;
+}
+
+h2 .input-group .form-control {
+  background: transparent;
+  color: white;
+  border: solid white 1px;
+}
+h2 .input-group ::placeholder {
+  color: lightgray;
+}
+
 /*# sourceMappingURL=style.css.map */
