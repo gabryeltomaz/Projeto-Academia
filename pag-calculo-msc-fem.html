@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Tracker</title>
+
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header>
+    <section class="navbar navbar-expand-lg fs-4 fw-bold p-1">
+      <article class="container-fluid">
+        <section class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav d-flex ms-auto p-1">
+            <li class="nav-item p-1">
+              <a class="nav-link text-white" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item p-1">
+              <a class="nav-link active text-white" href="./pag-treinos.html">Treinos</a>
+            </li>
+            <li class="nav-item p-1">
+              <a class="nav-link text-white" href="#">Dietas</a>
+            </li>
+            <li class="nav-item p-1">
+              <a class="nav-link text-white" href="#">Sobre</a>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </section>
+  </header>
+  
+  <main>
+
+    <section class="container-fluid d-flex row justify-content-center 
+    position-absolute top-50 start-50 translate-middle fs-3">
+
+      <article class="row justify-content-evenly align-items-center " >
+
+        <div class="card col-4 text-white" style="width: 500px; height: 500px;" id="card-masc">
+          <div class="card-body d-flex flex-column" >
+            <h5 class="card-title text-center fs-1">Masculino</h5>
+            
+            <div class="input-group mt-4">
+              <p class="card-text">Altura: </p>
+              <input type="text" class="form-control p-3 ms-3 me-3" style="height: 50px;" placeholder="Ex: 1.71" aria-label="Ex_name" aria-describedby="basic-addon1">
+              <p> M</p>
+            </div>
+
+            <div class="input-group mt-5">
+              <p class="card-text">Peso atual: </p>
+              <input type="text" class="form-control p-3 ms-3 me-3" style="height: 50px;" placeholder="Ex: 60" aria-label="Ex_name" aria-describedby="basic-addon1">
+              <p> Kgs</p>
+            </div>
+
+            <div class="input-group mt-5">
+              <p class="card-text">Peso desejado: </p>
+              <input type="text" class="form-control p-3 ms-3 me-3" style="height: 50px;" placeholder="Ex: 70" aria-label="Ex_name" aria-describedby="basic-addon1">
+              <p> Kgs</p>
+            </div>
+            <a href="./pag-dietas.html" class="btn btn-primary fs-5 position-absolute bottom-0 start-50 translate-middle-x col-7 mb-5">Calcular</a>
+          </div>
+        </div>
+
+        <div class="card col-4 text-white" style="width: 500px; height: 500px;" id="card-fem">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-center fs-1">Feminino</h5>
+            
+            <div class="input-group mt-4">
+              <p class="card-text">Altura: </p>
+              <input type="text" class="form-control p-3 ms-3 me-3" style="height: 50px;" placeholder="Ex: 1.71" aria-label="Ex_name" aria-describedby="basic-addon1">
+              <p> M</p>
+            </div>
+
+            <div class="input-group mt-5">
+              <p class="card-text">Peso atual: </p>
+              <input type="text" class="form-control p-3 ms-3 me-3" style="height: 50px;" placeholder="Ex: 60" aria-label="Ex_name" aria-describedby="basic-addon1">
+              <p> Kgs</p>
+            </div>
+
+            <div class="input-group mt-5">
+              <p class="card-text">Peso desejado: </p>
+              <input type="text" class="form-control p-3 ms-3 me-3" style="height: 50px;" placeholder="Ex: 70" aria-label="Ex_name" aria-describedby="basic-addon1">
+              <p> Kgs</p>
+            </div>
+            <a href="./pag-dietas.html" class="btn btn-primary fs-5 position-absolute bottom-0 start-50 translate-middle-x col-7 mb-5">Calcular</a>
+          </div>
+        </div>
+
+      </article>
+
+
+
+
+    </section>
+
+  </main>
+
+
+
+
+
+  <script src="./assets/js/bootstrap.bundle.min.js" ></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
