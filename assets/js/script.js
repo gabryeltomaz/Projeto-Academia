@@ -61,3 +61,59 @@ function addTable() {
   `;
   tablesContainer.insertAdjacentHTML('beforeend', newTableHTML);
 }
+
+
+    // Função para calcular calorias necessárias por dia
+    function calcularCalorias(altura, pesoAtual, pesoDesejado) {
+      var calorias = {
+        perderPeso: ((10 * pesoDesejado) + (6.25 * altura * 100) - (5 * 30) - 161),
+        manterPeso: ((10 * pesoDesejado) + (6.25 * altura * 100) - (5 * 30)),
+        ganharPeso: ((10 * pesoDesejado) + (6.25 * altura * 100) - (5 * 30) + 161)
+      };
+      return calorias;
+    }
+
+    // Função para calcular tempo necessário para atingir o objetivo (em meses)
+    function calcularTempo(altura, pesoAtual, pesoDesejado, objetivo) {
+      var tempo = Math.abs(pesoAtual - pesoDesejado) / 0.5; // Exemplo: Perda ou ganho de 0.5kg por semana
+      return tempo;
+    }
+
+    // Função para executar o cálculo quando o botão for clicado (masculino)
+    document.getElementById('calcular-btn-masc').addEventListener('click', function() {
+      var altura = parseFloat(document.getElementById('altura-masc').value);
+      var pesoAtual = parseFloat(document.getElementById('peso-atual-masc').value);
+      var pesoDesejado = parseFloat(document.getElementById('peso-desejado-masc').value);
+      var calorias = calcularCalorias(altura, pesoAtual, pesoDesejado);
+      var tempo = calcularTempo(altura, pesoAtual, pesoDesejado);
+      var url = 'pag-dietas.html' +
+            '?altura=' + altura +
+            '&pesoAtual=' + pesoAtual +
+            '&pesoDesejado=' + pesoDesejado +
+            '&sexo=masc' +
+            '&caloriasPerder=' + calorias.perderPeso +
+            '&caloriasManter=' + calorias.manterPeso +
+            '&caloriasGanhar=' + calorias.ganharPeso +
+            '&tempo=' + tempo;
+      window.location.href = url;
+    });
+
+    // Função para executar o cálculo quando o botão for clicado (feminino)
+    document.getElementById('calcular-btn-fem').addEventListener('click', function() {
+      var altura = parseFloat(document.getElementById('altura-fem').value);
+      var pesoAtual = parseFloat(document.getElementById('peso-atual-fem').value);
+      var pesoDesejado = parseFloat(document.getElementById('peso-desejado-fem').value);
+      var calorias = calcularCalorias(altura, pesoAtual, pesoDesejado);
+      var tempo = calcularTempo(altura, pesoAtual, pesoDesejado);
+      var url = 'pag-dietas.html' +
+            '?altura=' + altura +
+            '&pesoAtual=' + pesoAtual +
+            '&pesoDesejado=' + pesoDesejado +
+            '&sexo=fem' +
+            '&caloriasPerder=' + calorias.perderPeso +
+            '&caloriasManter=' + calorias.manterPeso +
+            '&caloriasGanhar=' + calorias.ganharPeso +
+            '&tempo=' + tempo;
+      window.location.href = url;
+    });
+    

@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gym Tracker</title>
-
-
+  <title>Gym Tracker - Resultados de Dieta</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -15,13 +13,13 @@
         <section class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav d-flex ms-auto p-1">
             <li class="nav-item p-1">
-              <a class="nav-link text-white" aria-current="page" href="./index.html">Home</a>
+              <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item p-1">
-              <a class="nav-link active text-white" href="./pag-treinos.html">Treinos</a>
+              <a class="nav-link text-white" href="./pag-treinos.html">Treinos</a>
             </li>
             <li class="nav-item p-1">
-              <a class="nav-link text-white" href="#">Dietas</a>
+              <a class="nav-link text-white" href="./pag-calculo-msc-fem.html">Dietas</a>
             </li>
             <li class="nav-item p-1">
               <a class="nav-link text-white" href="#">Sobre</a>
@@ -33,17 +31,129 @@
   </header>
   
   <main>
+    <section class="container-fluid d-flex row align-content-center position-absolute top-50 start-50 translate-middle fs-3">
+      <section class="d-flex justify-content-around flex-wrap text-center">
 
+        <div class="col-2">
+          <a href="#" class="card rounded-5 d-flex flex-column fw-bold " id="dieta_emagrecer" style="height: 500px; width: 350px;">
+            <article class="card-body text-white">
+              <h5 class="card-title text-center fs-1 fw-bold">Perder peso</h5>
+              <div class="card-text" style="margin-left: -45px;"  >
+                <ul class="lh-lg d-flex flex-column">
+                  <li class="mt-4">
+                    <span id="cals_emagrecer"></span>
+                  </li>
 
+                  <li class="mt-2">
+                    <span id="peso_final_emagrecer"></span>
+                  </li>
+
+                  <li class="mt-2">
+                    <span id="tempo_esperado_emagrecer"></span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </a>
+        </div>
+
+        <div class="col-2">
+          <a href="#" class="card rounded-5 d-flex flex-column fw-bold" id="dieta_manter" style="height: 500px; width: 350px;">
+            <article class="card-body text-white ">
+              <h5 class="card-title text-center fs-1 fw-bold">Manter peso</h5>
+              <div class="card-text" style="margin-left: -45px;"  >
+                <ul class="lh-lg d-flex flex-column">
+                  <li class="mt-4">
+                    <span id="cals_manter"></span>
+                    
+                  </li>
+
+                  <li class="mt-2">
+                    <span id="peso_final_manter"></span>
+                    
+                  </li>
+
+                  <li class="mt-2">
+                    <span id="tempo_esperado_manter"></span>
+                    
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </a>
+        </div>
+
+        <div class="col-2">
+          <a href="#" class="card rounded-5 d-flex flex-column fw-bold" id="dieta_ganhar" style="height: 500px; width: 350px;">
+            <article class="card-body text-white ">
+              <h5 class="card-title text-center fs-1 fw-bold">Ganhar peso</h5>
+              <div class="card-text" style="margin-left: -45px;"  >
+                <ul class="lh-lg d-flex flex-column">
+                  <li class="mt-4">
+                    <span id="cals_ganhar"></span>
+                    
+                  </li>
+
+                  <li class="mt-2">
+                    <span id="peso_final_ganhar"></span>
+                    
+                  </li>
+
+                  <li class="mt-2">
+                    <span id="tempo_esperado_ganhar"></span>
+                    
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </a>
+        </div>
+
+        <div class="col-2">
+          <a href="#" class="card rounded-5 d-flex flex-column fw-bold" id="dieta_personalizada" style="height: 500px; width: 350px;">
+            <article class="card-body text-white mt-5">
+              <h5 class="card-title text-center fs-1 fw-bold mt-5"><br> Personalizar <br> minha dieta</h5>                
+            </article>
+          </a>
+        </div>
+
+        <article class="container-fluid text-center position-absolute" id="sobre_treinos">
+          <a href="#">Sobre as Dietas</a>
+        </article>
+      </section>
+    </section>
   </main>
-
-
-
-
 
   <script src="./assets/js/bootstrap.bundle.min.js" ></script>
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
   <script src="./assets/js/script.js"></script>
+
+  <script>
+    function getUrlParams() {
+      var params = {};
+      window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) {
+        params[key] = decodeURIComponent(value);
+      });
+      return params;
+    }
+
+    window.onload = function() {
+      var params = getUrlParams();
+      document.getElementById('cals_emagrecer').textContent = params.caloriasPerder + ' cal/dia';
+      document.getElementById('peso_final_emagrecer').textContent = params.pesoAtual - 15 + ' Kgs';
+      document.getElementById('tempo_esperado_emagrecer').textContent = params.tempo + ' Meses';
+
+
+      document.getElementById('cals_manter').textContent = params.caloriasManter + ' cal/dia';
+      document.getElementById('peso_final_manter').textContent = params.pesoAtual + ' Kgs';
+      document.getElementById('tempo_esperado_manter').textContent =' 0 ' + ' Meses';
+
+
+      document.getElementById('cals_ganhar').textContent = params.caloriasGanhar + ' cal/dia';
+      document.getElementById('peso_final_ganhar').textContent = params.pesoAtual - -15 + ' Kgs';
+      document.getElementById('tempo_esperado_ganhar').textContent = params.tempo - 5 + ' Meses';
+    };
+  </script>
 </body>
 </html>

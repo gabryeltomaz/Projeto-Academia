@@ -12225,4 +12225,37 @@ h2 .input-group ::placeholder {
   background-size: 500px;
 }
 
+.container-fluid #dieta_emagrecer {
+  background-image: url("../img/fundo_frutas_editada.png");
+  background-position: center;
+  background-size: cover;
+  background-size: 500px;
+}
+.container-fluid #dieta_manter {
+  background-image: url("../img/fundo_omelete_editada.png");
+  background-position: center;
+  background-size: cover;
+  background-size: 500px;
+}
+.container-fluid #dieta_ganhar {
+  background-image: url("../img/fundo_carne_editada.png");
+  background-position: center;
+  background-size: cover;
+  background-size: 500px;
+}
+.container-fluid #dieta_personalizada {
+  background-image: url("../img/fundo_burguer_editada.png");
+  background-position: center;
+  background-size: cover;
+  background-size: 500px;
+}
+
+.card:hover {
+  scale: 1.05;
+}
+
+#sobre_treinos {
+  margin: 570px;
+}
+
 /*# sourceMappingURL=style.css.map */
