@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Tracker</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header>
+    <section class="navbar navbar-expand-lg fs-4 fw-bold p-1">
+      <article class="container-fluid">
+        <section class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav d-flex ms-auto p-1">
+            <li class="nav-item p-1">
+              <a class="nav-link active text-white" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item p-1">
+              <a class="nav-link text-white" href="./pag-treinos.html">Treinos</a>
+            </li>
+            <li class="nav-item p-1">
+              <a class="nav-link text-white" href="./pag-calculo-msc-fem.html">Dietas</a>
+            </li>
+            <li class="nav-item p-1">
+              <a class="nav-link text-white" href="#">Sobre</a>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </section>
+  </header>
+  
+  <main class="fs-5">
+    <!-- Tabela de Treinos Inicial -->
+    <section id="tables-container" class="container-fluid d-flex flex-column align-items-center">
+
+      <h2 class="text-white col-2 mt-5" style="margin-left: -1100px; margin-top: 0px; margin-bottom: -20px;">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Ex: Café da manhã" aria-label="Ex_name" aria-describedby="basic-addon1">
+        </div>
+      </h2>
+
+      <table id="tabela-dietas-1" class="table mt-5 w-75 table-dark table-bordered">
+        <thead class="">
+          <tr class="text-center table-active ">
+            <th scope="col">Alimentos</th>
+            <th scope="col">Calorias</th>
+          </tr>
+        </thead>
+        
+        <tbody class="text-center">
+          <!-- Linhas de treino -->
+          <tr>
+            <td>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Ex: Omelete com tomate e queijo" aria-label="Ex_name" aria-describedby="basic-addon1">
+              </div>
+            </td>
+            <td>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Ex: 300 calorias" aria-label="Ex_name" aria-describedby="basic-addon1">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-success mb-4" onclick="addRow('tabela-dietas-1')">Adicionar alimento</button>
+    </section>
+
+    <!-- Botão "Adicionar dia" -->
+    <section class="container-fluid d-flex flex-column justify-content-center col-3">
+      <button type="button" class="btn btn-success mb-4" onclick="addTable()">Adicionar refeição</button>
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="./assets/js/bootstrap.bundle.min.js" ></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+
+  <script>
+
+    let tableCount = 1;
+
+    function addRow(tableId) {
+      var table = document.getElementById(tableId);
+
+      var newRow = table.insertRow(-1);
+
+      var cell1 = newRow.insertCell(0);
+      var cell2 = newRow.insertCell(1);
+
+      cell1.innerHTML = `<div class="input-group"><input type="text" class="form-control" placeholder="Ex: Omelete com tomate e queijo" aria-label="Ex_name" aria-describedby="basic-addon1"></div>`;
+      cell2.innerHTML = `<div class="input-group"><input type="text" class="form-control" placeholder="Ex: 300 calorias" aria-label="Ex_name" aria-describedby="basic-addon1"></div>`;
+    }
+
+    function addTable() {
+      tableCount++;
+      var tablesContainer = document.getElementById('tables-container');
+      var newTableHTML = `
+      <h2 class="text-white col-2" style="margin-left: -1100px; margin-top: 0px; margin-bottom: -20px;">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Ex: Segunda" aria-label="Ex_name" aria-describedby="basic-addon1">
+      </div>
+      </h2>
+      <table id="tabela-dietas-${tableCount}" class="table mt-5 w-75 table-dark table-bordered">
+        <thead class="">
+          <tr class="text-center table-active ">
+          <th scope="col">Alimentos</th>
+          <th scope="col">Calorias</th>
+          </tr>
+        </thead>
+        
+        <tbody class="text-center">
+          <tr>
+            <td>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Ex: Omelete com tomate e queijo" aria-label="Ex_name" aria-describedby="basic-addon1">
+              </div>
+            </td>
+            <td>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Ex: 300 calorias" aria-label="Ex_name" aria-describedby="basic-addon1">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-success mb-4" onclick="addRow('tabela-dietas-${tableCount}')">Adicionar alimento</button>
+      `;
+      tablesContainer.insertAdjacentHTML('beforeend', newTableHTML);
+    }
+
+
+  </script>
+
+
+
+</body>
+</html>
