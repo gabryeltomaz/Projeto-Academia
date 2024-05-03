@@ -5,19 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gym Tracker</title>
 
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <style>
-    body, main, .d-flex, .mh-100 {
-      margin: 0;
-      padding: 0;
-    }
 
-    #imagem_treinos img, #imagem_dietas img {
-      width: 100%;
-      height: 100vh; /* Ajusta a altura para a altura da viewport */
-      object-fit: cover; /* Garante que a imagem cubra todo o espaço */
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <header>
@@ -45,38 +34,58 @@
   
   <main>
 
-    <section class="" style="height: 100vh;">
-      <article class="d-flex justify-content-center mh-100">
+    <section class="" style="height: 835px;">
+      <article class="d-flex justify-content-center mh-100" style="height: 835px;">
         <a href="./pag-treinos.html" id="imagem_treinos">
-          <img src="./assets/img/fundo primeira pag/academia fundo.jpg" alt="Fundo academia primeira pagina">
+          <img class="w-100 h-100"  src="./assets/img/fundo primeira pag/academia fundo.jpg" alt="Fundo academia primeira pagina">
+        
           <p class="info treinos text-white">
+
             Escolha um treino pré-selecionado <br>
-            ou monte seu próprio treino aqui!
+            ou monte seu proprio treino aqui!
+        
           </p>
+
         </a>
 
         <a href="./pag-calculo-msc-fem.html" id="imagem_dietas">
-          <img src="./assets/img/fundo primeira pag/top-view-scale-groceries.jpg" alt="Fundo balança primeira pagina">
+          <img class="w-100 h-100" src="./assets/img/fundo primeira pag/top-view-scale-groceries.jpg" alt="Fundo balança primeira pagina">
+          
           <p class="info dietas text-white">
+
             Escolha uma dieta pré-selecionada <br>
-            ou monte sua própria dieta aqui!
+            ou monte sua propria dieta aqui!
+        
           </p>
+          
         </a>
       </article>
     </section>
 
     <h1 class="text-white" id="texto_treinos">
-      Treinos
+          Treinos
     </h1>
 
     <h1 class="text-white" id="texto_dietas">
-      Dietas
+        Dietas
     </h1>
+
+
+              
+
+
+
+
 
   </main>
 
   <footer>
+
+
   </footer>
+
+
+
 
   <script src="./assets/js/bootstrap.bundle.min.js" ></script>
   <script src="./assets/js/popper.min.js"></script>
